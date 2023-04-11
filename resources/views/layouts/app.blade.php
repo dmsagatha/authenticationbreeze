@@ -23,7 +23,7 @@
   </head>
   <body class="antialiased">
     <div class="flex justify-center items-center h-screen">
-      <h1 class="text-3xl text-purple-600 font-bold">
+      <h1 class="text-center text-3xl text-purple-600 font-bold">
         Laravel with Vite and <a href="https://tailwindcss.com/">Tailwind CSS!</a>
       </h1>
     </div>
