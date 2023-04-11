@@ -14,7 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -25,6 +25,8 @@
     <div class="flex justify-center items-center h-screen">
       <h1 class="text-center text-3xl text-purple-600 font-bold">
         Laravel with Vite and <a href="https://tailwindcss.com/">Tailwind CSS!</a>
+        <i class="fa-solid fa-camera"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
       </h1>
     </div>
 
