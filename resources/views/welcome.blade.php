@@ -9,7 +9,7 @@
 
     <title>{{ $title ?? 'Laravel with Vite and Tailwind CSS' }}</title>
     
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

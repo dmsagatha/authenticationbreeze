@@ -9,7 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class IsAdmin
+class IsUser
 {
   /**
    * Handle an incoming request.
@@ -20,8 +20,8 @@ class IsAdmin
   {
     if (Auth::check())
     {
-      if ($request->user()->isAdmin()) {
-        return redirect()->route('admin.index');
+      if ($request->user()->isUser()) {
+        return redirect()->route('dashboard');
       }
     
       return $next($request);

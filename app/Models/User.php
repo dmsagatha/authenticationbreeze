@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Enums\UserRole;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -32,7 +33,14 @@ class User extends Authenticatable
   public function isAdmin(): Attribute
   {
     return new Attribute(
-      get:fn() => $this->role === \App\Enums\UserRole::Admin,
+      get:fn() => $this->role === UserRole::Admin
+    );
+  }
+
+  public function isUser(): Attribute
+  {
+    return new Attribute(
+      get:fn() => $this->role === UserRole::User
     );
   }
 }

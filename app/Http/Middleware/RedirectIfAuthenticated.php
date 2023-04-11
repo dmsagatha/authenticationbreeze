@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
@@ -10,21 +11,28 @@ use Symfony\Component\HttpFoundation\Response;
 
 class RedirectIfAuthenticated
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next, string ...$guards): Response
+  /**
+   * Handle an incoming request.
+   *
+   * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+   */
+  public function handle(Request $request, Closure $next, string...$guards): Response
+  {
+    $guards = empty($guards) ? [null] : $guards;
+
+    foreach ($guards as $guard)
     {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
+      if (Auth::guard($guard)->check()) {
+        if (auth()->user()->isAdmin()) {
+          // return redirect(RouteServiceProvider::ADMIN);
+          return redirect(route('admin.index'));
+        } elseif (auth()->user()->isUser()) {
+          // return redirect(RouteServiceProvider::HOME);
+          return redirect(route('dashboard'));
         }
-
-        return $next($request);
+      }
     }
+
+    return $next($request);
+  }
 }
