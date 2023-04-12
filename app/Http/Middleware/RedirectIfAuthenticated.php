@@ -24,11 +24,11 @@ class RedirectIfAuthenticated
     {
       if (Auth::guard($guard)->check()) {
         if (auth()->user()->isAdmin()) {
-          // return redirect(RouteServiceProvider::ADMIN);
-          return redirect(route('admin.index'));
+          return redirect(RouteServiceProvider::ADMIN);
+          // return redirect(route('admin.index'));
         } elseif (auth()->user()->isUser()) {
-          // return redirect(RouteServiceProvider::HOME);
-          return redirect(route('dashboard'));
+          return redirect(RouteServiceProvider::HOME);
+          // return redirect(route('dashboard'));
         }
       }
     }
