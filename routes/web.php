@@ -9,8 +9,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-Route::get('admin', 'HomeController@handleAdmin')->name('admin.index')->middleware('admin');
+Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+Route::get('admin', [AdminController::class, 'handleAdmin'])->name('admin.index')->middleware('admin');
 
 
 
