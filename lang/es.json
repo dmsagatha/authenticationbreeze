@@ -721,5 +721,9 @@
   "Zambia": "Zambia",
   "Zimbabwe": "Zimbabwe",
   "Zip \/ Postal Code": "Zip \/ Código postal",
-  "Åland Islands": "Islas Åland"
+  "Åland Islands": "Islas Åland",
+
+  "Admin User": "Super Administrador",
+  "Manager User": "Usuario administrador",
+  "Normal User": "Usuario"
 }
