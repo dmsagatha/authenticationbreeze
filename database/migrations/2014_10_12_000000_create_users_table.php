@@ -12,6 +12,7 @@ return new class extends Migration
     {
       $table->id();
       $table->string('name');
+      
       /* Users: 0=>User, 1=>Admin, 2=>Manager */
       $table->tinyInteger('type')->default(0);
       $table->string('email')->unique();

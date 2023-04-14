@@ -157,7 +157,7 @@
   "Create New Team": "Crear nuevo equipo",
   "¡Create one now!": "¡Crear una ahora!",
   "Create Team": "Crear equipo",
-  "Created.": "Creado.",
+  "Created": "Creado",
   "Croatia": "Croacia",
   "Cuba": "Cuba",
   "Curaçao": "Curazao",
@@ -478,7 +478,7 @@
   "Resume Subscription": "Reanudar suscripción",
   "Return to :appName": "Regresar a :appName",
   "Reunion": "Reunión",
-  "Role": "Rol",
+  "Role": "Tipo de Usuario",
   "Romania": "Rumania",
   "Run Action": "Ejecutar Acción",
   "Russian Federation": "Federación Rusa",
@@ -726,4 +726,5 @@
   "Admin User": "Super Administrador",
   "Manager User": "Usuario administrador",
   "Normal User": "Usuario"
+  
 }

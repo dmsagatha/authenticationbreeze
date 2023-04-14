@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 class HomeController extends Controller
 {
   public function __construct()
@@ -16,7 +18,9 @@ class HomeController extends Controller
 
   public function adminHome()
   {
-    return view('adminHome');
+    $users = User::orderBy('name')->get();
+
+    return view('adminHome', compact('users'));
   }
   
   public function managerHome()
