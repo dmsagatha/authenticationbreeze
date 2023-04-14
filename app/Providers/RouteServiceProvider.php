@@ -17,7 +17,10 @@ class RouteServiceProvider extends ServiceProvider
    *
    * @var string
    */
-  public const HOME = '/dashboard';
+  // public const HOME = '/dashboard';
+  public const HOME    = '/home';
+  public const ADMIN   = '/admin/home';
+  public const MANAGER = '/manager/home';
 
   /**
    * Define your route model bindings, pattern filters, and other route configuration.
@@ -36,10 +39,7 @@ class RouteServiceProvider extends ServiceProvider
         ->group(base_path('routes/web.php'));
     });
   }
-
-  /**
-   * Configure the rate limiters for the application.
-   */
+  
   protected function configureRateLimiting(): void
   {
     RateLimiter::for('api', function (Request $request)
