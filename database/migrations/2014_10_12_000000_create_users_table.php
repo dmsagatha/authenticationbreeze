@@ -13,7 +13,7 @@ return new class extends Migration
       $table->id();
       $table->string('name');
       
-      /* Users: 0=>User, 1=>Admin, 2=>Manager */
+      /* Users: 0=>User, 1=>Admin, 2=>Reviewer */
       $table->tinyInteger('type')->default(0);
       $table->string('email')->unique();
       $table->timestamp('email_verified_at')->nullable();

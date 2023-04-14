@@ -23,8 +23,8 @@ class HomeController extends Controller
     return view('adminHome', compact('users'));
   }
   
-  public function managerHome()
+  public function reviewerHome()
   {
-    return view('managerHome');
+    return view('reviewerHome');
   }
 }
