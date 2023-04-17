@@ -45,7 +45,7 @@
                         'text-sky-700 bg-sky-100' => UserRole::Reviewer === $item->role,
                         'text-teal-700 bg-teal-100' => UserRole::Admin === $item->role,
                         ])>
-                        {{-- {{ $item->role->name }} --}}
+                        {{ $item->role->name }} - {{ $item->role->value }} | 
                         {{ $item->role->getLabelText() }}
                       </span>
                     </div>
