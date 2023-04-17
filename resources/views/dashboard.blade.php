@@ -1,3 +1,4 @@
+@php use App\Enums\UserRole; @endphp
 <x-app-layout>
   <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -38,7 +39,15 @@
                   </td>
                   <td class="px-6 py-4">
                     <div class="text-sm text-gray-900">
-                      {{ $item->role }}
+                      <span @class([
+                        'px-2 py-1 font-semibold text-sm rounded-lg',
+                        'text-indigo-700 bg-indigo-100' => UserRole::User === $item->role,
+                        'text-sky-700 bg-sky-100' => UserRole::Reviewer === $item->role,
+                        'text-teal-700 bg-teal-100' => UserRole::Admin === $item->role,
+                        ])>
+                        {{-- {{ $item->role->name }} --}}
+                        {{ $item->role->getLabelText() }}
+                      </span>
                     </div>
                   </td>
                   <td class="px-6 py-4">
