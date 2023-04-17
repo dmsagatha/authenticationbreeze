@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\UserType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +15,8 @@ return new class extends Migration
       $table->string('name');
       
       /* Users: 0=>User, 1=>Admin, 2=>Reviewer */
-      $table->tinyInteger('type')->default(0);
+      // $table->tinyInteger('type')->default(0);
+      $table->integer('type')->default(UserType::user->value);
       $table->string('email')->unique();
       $table->timestamp('email_verified_at')->nullable();
       $table->string('password');
@@ -22,7 +24,7 @@ return new class extends Migration
       $table->timestamps();
     });
   }
-
+  
   public function down(): void
   {
     Schema::dropIfExists('users');
