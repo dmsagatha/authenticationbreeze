@@ -26,8 +26,8 @@ enum UserRole:int
   public function getLabelText(): string
   {
     return match ($this) {
-      self::Admin => 'Administrador',
-      self::User => 'Usuario',
+      self::Admin    => 'Administrador',
+      self::User     => 'Usuario',
       self::Reviewer => 'Revisor',
     };
   }
@@ -35,8 +35,8 @@ enum UserRole:int
   public function getLabelColor(): string
   {
     return match ($this) {
-      self::Admin => 'bg-sky-600',
-      self::User => 'bg-amber-600',
+      self::Admin    => 'bg-sky-600',
+      self::User     => 'bg-amber-600',
       self::Reviewer => 'bg-green-600',
     };
   }
