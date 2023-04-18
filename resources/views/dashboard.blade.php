@@ -1,4 +1,5 @@
 @php use App\Enums\UserRole; @endphp
+
 <x-app-layout>
   <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -44,7 +45,7 @@
                           'text-sky-700 bg-sky-100' => UserRole::Reviewer === $item->role,
                           'text-teal-700 bg-teal-100' => UserRole::Admin === $item->role
                         ])>
-                          {{ $item->role->name }} - {{ $item->role->value }} | 
+                          {{ $item->role->value }} - {{ $item->role->name }} | 
                           {{ $item->role->getLabelText() }}
                         </span>
                       </td>
