@@ -20,13 +20,13 @@
               <table class="min-w-full">
                 <thead>
                   <tr>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('ID') }}</th>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('Name') }}</th>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('Role') }}</th>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('Email') }}</th>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('Created') }}</th>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('Edit') }}</th>
-                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase">{{ __('Delete') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('ID') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('Name') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('Role') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('Email') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('Created') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('Edit') }}</th>
+                    <th class="px-2 py-3 text-xs font-medium leading-4 tracking-wider uppercase border-b bg-gray-50">{{ __('Delete') }}</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white">
