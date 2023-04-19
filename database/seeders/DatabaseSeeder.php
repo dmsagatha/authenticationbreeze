@@ -28,10 +28,10 @@ class DatabaseSeeder extends Seeder
         'password' => bcrypt('superadmin'),
       ],
       [
-        'name'     => 'User',
-        'email'    => 'user@tutsmake.com',
+        'name'     => 'Agatha',
+        'email'    => 'agatha@tmp.com',
         'role'     => 1,
-        'password' => bcrypt('123456'),
+        'password' => bcrypt('agatha'),
       ],
       [
         'name'     => 'Manager User',
