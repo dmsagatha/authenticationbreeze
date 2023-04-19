@@ -20,13 +20,13 @@
               <table class="min-w-full">
                 <thead>
                   <tr>
-                    <th>{{ __('ID') }}</th>
-                    <th>{{ __('Name') }}</th>
-                    <th>{{ __('Role') }}</th>
-                    <th>{{ __('Email') }}</th>
-                    <th>{{ __('Created') }}</th>
-                    <th>{{ __('Edit') }}</th>
-                    <th>{{ __('Delete') }}</th>
+                    <th class="px-2 py-3">{{ __('ID') }}</th>
+                    <th class="px-2 py-3">{{ __('Name') }}</th>
+                    <th class="px-2 py-3">{{ __('Role') }}</th>
+                    <th class="px-2 py-3">{{ __('Email') }}</th>
+                    <th class="px-2 py-3">{{ __('Created') }}</th>
+                    <th class="px-2 py-3">{{ __('Edit') }}</th>
+                    <th class="px-2 py-3">{{ __('Delete') }}</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white">
