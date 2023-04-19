@@ -20,13 +20,13 @@
               <table class="min-w-full">
                 <thead>
                   <tr>
-                    <th>{{ __('ID') }}</th>
-                    <th>{{ __('Name') }}</th>
-                    <th>{{ __('Role') }}</th>
-                    <th>{{ __('Email') }}</th>
-                    <th>{{ __('Created') }}</th>
-                    <th>{{ __('Edit') }}</th>
-                    <th>{{ __('Delete') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('ID') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('Name') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('Role') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('Email') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('Created') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('Edit') }}</th>
+                    <th class="px-2 py-3 text-xs font-semibold leading-4 tracking-wider uppercase bg-gray-50 border-b border-green-200">{{ __('Delete') }}</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white">
