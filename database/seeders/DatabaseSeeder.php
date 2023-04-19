@@ -8,8 +8,6 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-  public function run(): void
-  {
     // \App\Models\User::factory(10)->create();
 
     // \App\Models\User::factory()->create([
@@ -21,19 +19,19 @@ class DatabaseSeeder extends Seeder
       [
         'name'     => 'Super Admin',
         'email'    => 'superadmin@admin.net',
-        'type'     => 1,
+        'role'     => 0,
         'password' => bcrypt('superadmin'),
-      ],
-      [
-        'name'     => 'Manager User',
-        'email'    => 'manager@tutsmake.com',
-        'type'     => 2,
-        'password' => bcrypt('123456'),
       ],
       [
         'name'     => 'User',
         'email'    => 'user@tutsmake.com',
-        'type'     => 0,
+        'role'     => 1,
+        'password' => bcrypt('123456'),
+      ],
+      [
+        'name'     => 'Manager User',
+        'email'    => 'manager@tutsmake.com',
+        'role'     => 2,
         'password' => bcrypt('123456'),
       ],
     ];
@@ -41,5 +39,7 @@ class DatabaseSeeder extends Seeder
     foreach ($users as $key => $user) {
       User::create($user);
     }
+
+    User::factory(5)->create();
   }
 }

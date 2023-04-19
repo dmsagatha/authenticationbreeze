@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +10,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-  return view('dashboard');
+  $users = User::orderBy('name')->get();
+
+  return view('dashboard', compact('users'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // https://www.cambotutorial.com/article/laravel-9-login-multiple-roles-using-custom-middleware
